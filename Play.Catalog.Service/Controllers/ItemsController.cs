@@ -22,7 +22,12 @@ namespace Play.Catalog.Service.Controllers
             new ItemDto(Guid.NewGuid(),"Potion C","Potion C description", 27, System.DateTimeOffset.UtcNow)
         };*/
 
-        private readonly ItemsRepository itemsRepository = new();
+        private readonly IItemsRepository itemsRepository;
+
+        public ItemsController(IItemsRepository itemsRepository)
+        {
+            this.itemsRepository = itemsRepository;
+        }
 
         [HttpGet]
         [Route("/")]
