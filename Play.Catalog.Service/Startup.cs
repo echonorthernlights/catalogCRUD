@@ -14,7 +14,7 @@ using Microsoft.OpenApi.Models;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson;
-using MongoDD.Driver;
+using MongoDB.Driver;
 using Play.Catalog.Service.Settings;
 using Play.Catalog.Service.Repositories;
 
@@ -45,10 +45,10 @@ namespace Play.Catalog.Service
             {
                 var mongoDbSettings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
                 var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
-                return mongoClient.GetDatabase(serviceSettings.ServcieName);
+                return mongoClient.GetDatabase(serviceSettings.ServiceName);
             });
             // Declare which type we want to register and which interface to implement
-            services.AddSingleton<IItemRepository, ItemRepository>();
+            services.AddSingleton<IItemsRepository, ItemsRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
