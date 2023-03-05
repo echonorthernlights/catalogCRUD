@@ -40,6 +40,7 @@ namespace Play.Catalog.Service
 
             // Get configuration service settings on startup {explicit construction of mongo client}
             serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
+ 
             // Mount MongoDb settings + service settings
             services.AddSingleton(serviceProvider =>
             {
