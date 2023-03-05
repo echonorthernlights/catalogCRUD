@@ -954,11 +954,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\root\\source\\repos\\test\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "projectUniqueName": "C:\\Users\\root\\source\\repos\\CatalogMicroservice\\catalogCRUD\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
       "projectName": "Play.Catalog.Service",
-      "projectPath": "C:\\Users\\root\\source\\repos\\test\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "projectPath": "C:\\Users\\root\\source\\repos\\CatalogMicroservice\\catalogCRUD\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
       "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\root\\source\\repos\\test\\Play.Catalog.Service\\obj\\",
+      "outputPath": "C:\\Users\\root\\source\\repos\\CatalogMicroservice\\catalogCRUD\\Play.Catalog.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config"

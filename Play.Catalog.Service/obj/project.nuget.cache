@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QZawZcgEnsH2U4h0MW1ThzUVag7cmQllM7DPSSRR2UatlPSXCYdWyv54aH7Q6ysU++xVMv5uU1ya/gJu0wnWmw==",
+  "dgSpecHash": "dJoQm17mSgAZCBpTaQBEYb1GX/XRh5DAuYDXEsHOdGDhZ26crYsk73yM88hAUcXo44/+lwoKsRIJvwVp86bh3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\root\\source\\repos\\test\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+  "projectFilePath": "C:\\Users\\root\\source\\repos\\CatalogMicroservice\\catalogCRUD\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

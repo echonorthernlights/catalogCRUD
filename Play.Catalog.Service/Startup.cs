@@ -17,6 +17,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using Play.Catalog.Service.Settings;
 using Play.Catalog.Service.Repositories;
+using Play.Catalog.Service.Entities;
 
 namespace Play.Catalog.Service
 {
@@ -40,7 +41,7 @@ namespace Play.Catalog.Service
 
             // Get configuration service settings on startup {explicit construction of mongo client}
             serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
- 
+
             // Mount MongoDb settings + service settings
             services.AddSingleton(serviceProvider =>
             {
@@ -49,7 +50,11 @@ namespace Play.Catalog.Service
                 return mongoClient.GetDatabase(serviceSettings.ServiceName);
             });
             // Declare which type we want to register and which interface to implement
-            services.AddSingleton<IItemsRepository, ItemsRepository>();
+            services.AddSingleton<IRepository<Item>>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new MongoRepository<Item>(database, "items");
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
